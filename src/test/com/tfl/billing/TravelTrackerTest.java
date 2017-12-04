@@ -58,8 +58,8 @@ public class TravelTrackerTest {
         OysterCard myCard = new OysterCard("38400000-8cf0-11bd-b23e-10b96e4ef00d");
         OysterCardReader eustonReader = OysterReaderLocator.atStation(Station.EUSTON);
         eustonReader.touch(myCard);
-        List<JourneyEvent> eventLog2 = travelTracker.getEventLog();
-        assertTrue(eventLog2.contains(myCard));
+        Set<UUID> currentlyTravelling2 = travelTracker.getCurrentlyTravelling();
+        assertTrue(currentlyTravelling2.contains(myCard));
     }
 /*
     @Test

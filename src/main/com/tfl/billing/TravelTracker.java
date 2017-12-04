@@ -101,5 +101,7 @@ public class TravelTracker implements ScanListener {
     public List<JourneyEvent> getEventLog() {
         return this.eventLog;
     }
+
+    //push
 }
 
